@@ -42,10 +42,13 @@ const ContactForm = () => {
     >
       <Form className={css.form}>
         <div className={css.inputWrapper}>
-          <label htmlFor={nameFieldId}>Name</label>
+          <label htmlFor={nameFieldId} className={css.label}>
+            Name
+          </label>
           <Field
             type="text"
             name="name"
+            placeholder="Kateryna Bobryshova"
             id={nameFieldId}
             className={css.input}
           />
@@ -56,12 +59,15 @@ const ContactForm = () => {
           />
         </div>
         <div className={css.inputWrapper}>
-          <label htmlFor={phoneFieldId}>Number</label>
+          <label htmlFor={phoneFieldId} className={css.label}>
+            Phone number
+          </label>
           <Field
             type="tel"
             name="number"
             id={phoneFieldId}
             className={css.input}
+            placeholder="111-22-33"
           />
           <ErrorMessage
             className={css.ErrorMessage}
@@ -71,6 +77,22 @@ const ContactForm = () => {
         </div>
         <button type="submit" className={css.button}>
           Add contact
+          <svg
+            className={css.svg}
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="24"
+            viewBox="0 0 25 24"
+            fill="none"
+          >
+            <path
+              d="M5.75 11.2059L10.75 16.5L19.25 7.5"
+              stroke="#FDFCFD"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </button>
       </Form>
     </Formik>
