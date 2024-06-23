@@ -40,7 +40,7 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  background-color: tra;
+  background-color: transparent;
 }
 .button:hover {
   background-color: #e0e0e0;
